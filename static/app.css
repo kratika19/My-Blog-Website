@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Tahoma", monospace;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+}
