@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    This Post Title
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post-detail.css" %}?{% now "U" %}">
+{% endblock %}
+
+{% block content %}
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static 'blog/images/woods.jpg' %}" alt="Post Title">
+            <address>By Maximilian</address>
+            <div>
+                Last updated on
+                <time>June 10th</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur cum debitis impedit maxime
+            pariatur praesentium quo sequi tempora veritatis? Magni sapiente, unde! Ab alias architecto aut corporis ea,
+            excepturi, facilis itaque iure minus non perferendis quaerat quis, saepe tenetur.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur cum debitis impedit maxime
+            pariatur praesentium quo sequi tempora veritatis? Magni sapiente, unde! Ab alias architecto aut corporis ea,
+            excepturi, facilis itaque iure minus non perferendis quaerat quis, saepe tenetur.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur cum debitis impedit maxime
+            pariatur praesentium quo sequi tempora veritatis? Magni sapiente, unde! Ab alias architecto aut corporis ea,
+            excepturi, facilis itaque iure minus non perferendis quaerat quis, saepe tenetur.
+        </p>
+    </main>
+{% endblock %}
