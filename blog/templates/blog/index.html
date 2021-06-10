@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+    <link rel="stylesheet" href="{% static "blog/index.css" %}?{% now "U" %}">
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,7 @@
 
     <section id="welcome">
         <header>
-            <img src="" alt="Kratika - Author">
+            <img src="{% static "blog/images/personal.jpeg" %}" alt="Kratika - Author">
             <h2>KRATIKA'S BLOG</h2>
         </header>
         <p>Hi, I'm Kratika and I am a Sophomore at NITH and I love to code and learn new things. Presently, I'm learning
@@ -30,7 +30,7 @@
             <li>
                 <article class="post">
                     <a href="">
-                        <img src="" alt="Mountain Hiking">
+                        <img src="{% static "blog/images/mountain.jpg" %}" alt="Mountain Hiking">
                         <div class="post__content">
                             <h3>Mountain Hiking</h3>
                             <p>There is nothing like the views you get when hiking in the mountains! And I wasn't even

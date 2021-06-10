@@ -42,7 +42,7 @@
     height: 10rem;
     object-fit: cover;
     object-position: top;
-    border: 5px solid white;
+    border: 5px solid #cf79f1;
     border-radius: 12px;
     background-color: #ffe1bf;
     transform: rotateZ(-5deg);
