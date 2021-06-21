@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-{{ post.title }}
+    {{ post.title }}
 {% endblock %}
 
 {% block css_files %}
@@ -16,7 +16,7 @@
             {% for tag in post_tags %}
                 <span class="tag">{{ tag.caption }}</span>
             {% endfor %}
-            
+
         </div>
         <article>
             <img src="{{ post.image.url }}" alt="{{ post.title }}">
@@ -29,6 +29,21 @@
     </section>
 
     <main>
-           {{ post.content|linebreaks }}
+        {{ post.content|linebreaks }}
     </main>
+
+    <section id="comment_form">
+        <h2>Type a Comment</h2>
+        <form>
+            {% csrf_token %}
+            {% for field in comment_form %}
+                <div class="form-control">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.errors }}
+                </div>
+            {% endfor %}
+            <button>SAVE COMMENT</button>
+        </form>
+    </section>
 {% endblock %}
