@@ -31,6 +31,7 @@ h1, h2, h3 {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    margin-left: 1rem;
 }
 
 #main-navigation a:hover,
