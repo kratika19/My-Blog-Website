@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,12 +12,13 @@
     {% block css_files %}{% endblock %}
 </head>
 <body>
-    <header id="main-navigation">
-        <h1><a href="{% url 'starting-page' %}">Kratika's Blog</a></h1>
-        <nav>
-            <a href="{% url 'post-page' %}">All Posts</a>
-        </nav>
-    </header>
+<header id="main-navigation">
+    <h1><a href="{% url 'starting-page' %}">Kratika's Blog</a></h1>
+    <nav>
+        <a href="{% url 'read-later' %}">Read Later</a>
+        <a href="{% url 'post-page' %}">All Posts</a>
+    </nav>
+</header>
 {% block content %}
 
 {% endblock %}

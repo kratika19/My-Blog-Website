@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static "blog/post-detail.css" %}?{% now "U" %}">
 {% endblock %}
 
+
 {% block content %}
 
     {% if comment_form.errors %}
@@ -25,8 +26,16 @@
             {% for tag in post_tags %}
                 <span class="tag">{{ tag.caption }}</span>
             {% endfor %}
-
         </div>
+
+        <div id="read-later">
+            <form action="{% url "read-later" %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{ post.id }}" name="post_id">
+                <button>Read Later</button>
+            </form>
+        </div>
+
         <article>
             <img src="{{ post.image.url }}" alt="{{ post.title }}">
             <address><a href="mailto:{{ post.author.email }}">By {{ post.author }}</a></address>
